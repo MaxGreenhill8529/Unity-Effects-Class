@@ -27,7 +27,7 @@ public class Effects : MonoBehaviour
     {
         float startingValue = 0;
         float endingValue = 0;
-        if (FadeModeChecker(fadeMode, startingValue, endingValue) == false)
+        if (FadeModeChecker(fadeMode,ref startingValue,ref endingValue) == false)
         {
             yield break;
         }
@@ -52,7 +52,7 @@ public class Effects : MonoBehaviour
     {
         float startingValue = 0;
         float endingValue = 0;
-        if (FadeModeChecker(fadeMode, startingValue, endingValue) == false)
+        if (FadeModeChecker(fadeMode,ref startingValue,ref endingValue) == false)
         {
             yield break;
         }
@@ -77,7 +77,7 @@ public class Effects : MonoBehaviour
     {
         float startingValue = 0;
         float endingValue = 0;
-        if(FadeModeChecker(fadeMode,startingValue,endingValue) == false)
+        if(FadeModeChecker(fadeMode,ref startingValue,ref endingValue) == false)
         {
             yield break;
         }
@@ -92,7 +92,7 @@ public class Effects : MonoBehaviour
     }
 
     //If the given string is an invalid, return false
-    private static bool FadeModeChecker(string fadeMode, ref int startingValue, ref int endingValue)
+    private static bool FadeModeChecker(string fadeMode, ref float startingValue, ref float endingValue)
     {
         if (fadeMode.Equals(_in))
         {
